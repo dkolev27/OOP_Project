@@ -19,63 +19,63 @@ void Manager::commands()
 		cout << "> ";
 		getline(cin, line);
 		vector<string> parts = splitLine(line);
-        string command = parts[0];
+        	string command = parts[0];
 
 		if (parts.size() == 0) continue;
 
-        if (command == "login")
-            loggedUser = logInUser(users, loggedUser, parts);
+        	if (command == "login")
+         	   loggedUser = logInUser(users, loggedUser, parts);
 
-        else if (command == "logout")
-            loggedUser = logOutUser(loggedUser, parts);
+        	else if (command == "logout")
+          	   loggedUser = logOutUser(loggedUser, parts);
 
-        else if (command == "usersAdd")
-            addUser(users, loggedUser, parts);
+        	else if (command == "usersAdd")
+           	   addUser(users, loggedUser, parts);
 
-        else if (command == "usersRemove")
-            removeUser(users, loggedUser, parts);
+        	else if (command == "usersRemove")
+            	   removeUser(users, loggedUser, parts);
 
-        else if (command == "open")
-            openBooksFile(books, parts);
+        	else if (command == "open")
+            	   openBooksFile(books, parts);
 
-        else if (command == "close")
-            closeBooksFile(books, parts);
+        	else if (command == "close")
+            	   closeBooksFile(books, parts);
 
-        else if (command == "save")
-            line = saveBooksFile(books, line, parts);
+        	else if (command == "save")
+            	   line = saveBooksFile(books, line, parts);
 
-        else if (command == "saveAs")
-            saveBooksFileAs(books, parts);
+        	else if (command == "saveAs")
+            	   saveBooksFileAs(books, parts);
 
-        else if (command == "booksAdd")
-            booksAdd(books, loggedUser, parts);
+        	else if (command == "booksAdd")
+            	   booksAdd(books, loggedUser, parts);
 
-        else if (command == "booksAll")
-            showAllBooks(books, loggedUser, parts);
+        	else if (command == "booksAll")
+            	   showAllBooks(books, loggedUser, parts);
 
-        else if (command == "booksView")
-            booksView(books, loggedUser, parts);
+        	else if (command == "booksView")
+            	   booksView(books, loggedUser, parts);
 
-        else if (command == "booksInfo")
-            booksInfo(books, loggedUser, parts);
+        	else if (command == "booksInfo")
+            	   booksInfo(books, loggedUser, parts);
 
-        else if (command == "booksFind")
-            booksFind(books, loggedUser, parts);
+        	else if (command == "booksFind")
+            	   booksFind(books, loggedUser, parts);
 
-        else if (command == "booksRemove")
-            booksRemove(books, loggedUser, parts);
+        	else if (command == "booksRemove")
+            	   booksRemove(books, loggedUser, parts);
 
-        else if (command == "booksSort")
-            booksSort(books, loggedUser, parts);
+        	else if (command == "booksSort")
+            	   booksSort(books, loggedUser, parts);
 
-        else if (command == "help")
-            help(parts);
+        	else if (command == "help")
+            	   help(parts);
 
-        else if (command == "exit")
-            break;
+        	else if (command == "exit")
+            	   break;
 
-        else
-            cout << "Invalid command!" << endl;
+        	else
+            	   cout << "Invalid command!" << endl;
 
 	} 
 	while (true);
